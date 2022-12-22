@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 import datetime
 def wishes3(request):
     date1=datetime.datetime.now()
@@ -19,3 +20,7 @@ def wishes3(request):
         imgs = 'image4.jpg';
     dict1={'date1':date1,'msg1':msg1,'imgs':imgs}
     return render(request,'FirstApp/wishes3.html',context=dict1);
+    
+    def git_view(request):
+    return HttpResponse("<h2>hello from github view function</h2>");
+    
